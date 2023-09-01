@@ -2,3 +2,16 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+body {
+}
+
+.wrapper {
+  background: rgb(0, 199, 126);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 150, 136, 1) 22%,
+    rgba(218, 219, 211, 1) 22%
+  );
+  height: 100vh;
+}
