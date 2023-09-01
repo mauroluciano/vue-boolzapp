@@ -4,9 +4,6 @@
 }
 
 body {
-}
-
-.wrapper {
   background: rgb(0, 199, 126);
   background: linear-gradient(
     180deg,
@@ -14,4 +11,13 @@ body {
     rgba(218, 219, 211, 1) 22%
   );
   height: 100vh;
+}
+
+.container {
+  background-color: #eaeaea;
+  width: 100%;
+}
+
+.col {
+  height: 90vh;
 }
