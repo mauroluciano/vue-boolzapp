@@ -21,3 +21,13 @@ body {
 .col {
   height: 90vh;
 }
+
+.thumb {
+  border-radius: 30px;
+  height: 50px;
+}
+
+.messageNotice {
+  background-color: #8edafc;
+  height: 50px;
+}
