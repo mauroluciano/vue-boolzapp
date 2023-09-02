@@ -13,6 +13,10 @@ body {
   height: 100vh;
 }
 
+.debug {
+  border: 1px dashed red;
+}
+
 .container {
   background-color: #eaeaea;
   width: 100%;
@@ -22,12 +26,40 @@ body {
   height: 90vh;
 }
 
-.thumb {
+.myThumb {
   border-radius: 30px;
   height: 50px;
 }
 
+.thumb {
+  border-radius: 30px;
+  height: 65px;
+}
+
+.sidebar {
+  height: 90vh;
+}
+
 .messageNotice {
   background-color: #8edafc;
-  height: 50px;
+  height: 80px;
+}
+
+.messageNotice i {
+  border-radius: 30px;
+  background-color: white;
+  font-size: 20px;
+  color: #8edafc;
+}
+
+.myUser {
+  height: 60px;
+}
+
+.messageNoticeText p {
+  margin: 0;
+}
+
+#active {
+  background-color: white;
 }
