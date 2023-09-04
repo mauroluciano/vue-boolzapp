@@ -18,12 +18,13 @@ body {
 }
 
 .container {
-  background-color: #eaeaea;
+  background-color: #fafafa;
   width: 100%;
 }
 
 .col {
   height: 90vh;
+  padding: 0;
 }
 
 .myThumb {
@@ -63,10 +64,11 @@ body {
 .chatList {
   overflow-y: scroll;
   height: 65vh;
+  background-color: white;
 }
 
 #active {
-  background-color: white;
+  background-color: #eaeaea;
 }
 
 .mainMessage {
@@ -74,4 +76,12 @@ body {
   background-repeat: repeat;
   height: 75vh;
   overflow-y: scroll;
+}
+
+section {
+  border: border-bottom;
+}
+
+i {
+  color: #b1b1b1;
 }
