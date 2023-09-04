@@ -85,3 +85,10 @@ section {
 i {
   color: #b1b1b1;
 }
+
+.messageBox {
+  background-color: #d5f9ba;
+  width: 250px;
+  height: 60px;
+  border-radius: 20px;
+}
