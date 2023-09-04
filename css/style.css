@@ -86,9 +86,18 @@ i {
   color: #b1b1b1;
 }
 
-.messageBox {
+.sendMessage {
   background-color: #d5f9ba;
   width: 250px;
   height: 40px;
   border-radius: 10px;
+  margin: 15px;
+}
+
+.receivedMessage {
+  background-color: #fff;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 15px;
 }
