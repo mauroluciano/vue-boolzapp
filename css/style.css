@@ -60,6 +60,15 @@ body {
   margin: 0;
 }
 
+.chatList {
+  overflow-y: scroll;
+  height: 65vh;
+}
+
 #active {
   background-color: white;
+}
+
+.mainMessage {
+  background-image: url("img/mine.jpg");
 }
