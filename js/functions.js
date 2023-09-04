@@ -168,6 +168,8 @@ createApp({
           ],
         },
       ],
+
+      sendMessage: "".trim(),
     };
   },
 
@@ -175,6 +177,27 @@ createApp({
     setCurrent(index) {
       this.currentContact = index;
       console.log(this.currentContact);
+    },
+
+    addNewMessage() {
+      const newMessage = {
+        message: this.sendMessage,
+        status: "sent",
+        date: "oggi",
+      };
+      this.contacts[this.currentContact].messages.push(newMessage);
+
+      setTimeout(this.responseNewMessage, 2000);
+      this.sendMessage = "";
+    },
+
+    responseNewMessage() {
+      const newMessage = {
+        message: "ma vaffanculo",
+        status: "received",
+        date: "oggi",
+      };
+      this.contacts[this.currentContact].messages.push(newMessage);
     },
   },
 }).mount("#app");
