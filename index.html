@@ -111,10 +111,12 @@
 
 
 
-
-              <div class="sendMessage align-self-end" v-for="message of contacts[currentContact].messages">
+            <!--ternario, inserimento di una classe in base al valore della variabile booleana   ? aggiunge la classe   : altrimenti-->
+              <div :class="(message.status=='sent')?'sendMessage align-self-end' : 'receivedMessage'" class="message " v-for="message of contacts[currentContact].messages" >
                 <span class="p-3">{{ message.message }}</span>
               </div>
+
+              
 
 
 
