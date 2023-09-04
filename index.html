@@ -30,7 +30,7 @@
     <title>Boolzapp by Mauro</title>
   </head>
   <body>
-    <div class="mt-4">
+    <div class="mt-4" id="app">
       <div class="container">
         <div class="row">
           <div class="col col-5">
@@ -72,90 +72,22 @@
                 </div>
               </div>
               <div class="chatList">
-                <section class="d-flex justify-content-start p-2" id="active">
+
+
+
+                <section class="d-flex justify-content-start p-2" v-for="(contact, index) of contacts" @click="setCurrent(index)">
                   <div class="align-self-center">
                     <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
                   </div>
                   <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
+                    <p class="fw-bold">{{ contact.name }}</p>
+                    <p class="fw-light">{{ contact.messages[contact.messages.length -1 ].message }}</p>
                   </div>
                   <div class="timeLastMessage align-self-center">
-                    <p>12:00</p>
+                    <p>{{ contact.messages[contact.messages.length -1 ].date }}</p>
                   </div>
                 </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
-                <section class="d-flex justify-content-start p-2">
-                  <div class="align-self-center">
-                    <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
-                  </div>
-                  <div class="messageNoticeText align-self-center">
-                    <p class="fw-bold">Michele</p>
-                    <p class="fw-light">Ultimo messaggio inviato</p>
-                  </div>
-                </section>
+
               </div>
             </div>
           </div>
@@ -176,63 +108,14 @@
               </div>
             </div>
             <div class="mainMessage d-flex justify-content-start flex-column ">
-              <section class="sendMessage align-self-end">
-                <span class="p-3">Hai portato a spasso il cane?</span>
-            </section>
-            <section class="sendMessage align-self-end">
-              <span class="p-3">Ricordati di stendere i panni</span>
-            </section>
 
-            <section class="receivedMessage align-self-start">
-              <span class="p-3">Tutto fatto!</span>
-          </section>
-          <section class="receivedMessage align-self-start">
-            <span class="p-3">Tutto fatto!</span>
-        </section>
 
-        <section class="receivedMessage align-self-start">
-          <span class="p-3">Tutto fatto!</span>
-      </section>
 
-      <section class="receivedMessage align-self-start">
-        <span class="p-3">Tutto fatto!</span>
-    </section>
 
-    <section class="receivedMessage align-self-start">
-      <span class="p-3">Tutto fatto!</span>
-  </section>
+              <div class="sendMessage align-self-end" v-for="message of contacts[currentContact].messages">
+                <span class="p-3">{{ message.message }}</span>
+              </div>
 
-  <section class="receivedMessage align-self-start">
-    <span class="p-3">Tutto fatto!</span>
-</section>
-
-<section class="receivedMessage align-self-start">
-  <span class="p-3">Tutto fatto!</span>
-</section>
-
-<section class="receivedMessage align-self-start">
-  <span class="p-3">Tutto fatto!</span>
-</section>
-
-<section class="receivedMessage align-self-start">
-  <span class="p-3">Tutto fatto!</span>
-</section>
-
-<section class="receivedMessage align-self-start">
-  <span class="p-3">Tutto fatto!</span>
-</section>
-
-<section class="receivedMessage align-self-start">
-  <span class="p-3">Tutto fatto!</span>
-</section>
-
-<section class="receivedMessage align-self-start">
-  <span class="p-3">Tutto fatto!</span>
-</section>
-
-<section class="receivedMessage align-self-start">
-  <span class="p-3">Tutto fatto!</span>
-</section>
 
 
           </div>
