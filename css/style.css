@@ -70,5 +70,8 @@ body {
 }
 
 .mainMessage {
-  background-image: url("img/mine.jpg");
+  background-image: url("../img/mine.jpg");
+  background-repeat: repeat;
+  height: 75vh;
+  overflow-y: scroll;
 }
