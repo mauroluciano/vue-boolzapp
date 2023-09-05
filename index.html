@@ -72,9 +72,6 @@
                 </div>
               </div>
               <div class="chatList">
-
-
-
                 <section class="d-flex justify-content-start p-2" v-for="(contact, index) of contacts" @click="setCurrent(index)">
                   <div class="align-self-center">
                     <img src="./img/avatar_1.jpg" class="thumb mt-2" alt="" />
@@ -83,25 +80,24 @@
                     <p class="fw-bold">{{ contact.name }}</p>
                     <p class="fw-light">{{ contact.messages[contact.messages.length -1 ].message }}</p>
                   </div>
-                  <div class="timeLastMessage align-self-center">
-                    <p>{{ contact.messages[contact.messages.length -1 ].date }}</p>
+                  <div class="timeLastMessage align-self-center ms-auto">
+                    <p class="textDate">{{ contact.messages[contact.messages.length -1 ].date }}</p>
                   </div>
                 </section>
-
               </div>
             </div>
           </div>
           <div class="col col-7">
-            <div class="myUser d-flex justify-content-between p-2">
-              <div class="myUserPic">
+            <div class="myUser d-flex justify-content-start p-2">
+              <div class="myUserPic d-flex align-self-center">
                 <img src="./img/avatar_io.jpg" class="myThumb mt-2" alt="" />
                 <div class="messageNoticeText align-self-center">
                   <p class="fw-bold">Michele</p>
-                  <p class="fw-light">Ultimo messaggio inviato</p>
+                  <p class="fw-light">Ultimo accesso oggi alle 12:00</p>
                 </div>
               </div>
 
-              <div class="userIcons align-self-center">
+              <div class="userIcons align-self-center ms-auto">
                 <i class="fas fa-search me-3"></i>
                 <i class="fas fa-paperclip me-3"></i>
                 <i class="fas fa-ellipsis-v me-3"></i>
@@ -113,7 +109,9 @@
 
             <!--ternario, inserimento di una classe in base al valore della variabile booleana   ? aggiunge la classe   : altrimenti-->
               <div :class="(message.status=='sent')?'sendMessage align-self-end' : 'receivedMessage'" class="message " v-for="message of contacts[currentContact].messages" >
-                <span class="p-3">{{ message.message }}</span>
+                <span>{{ message.message }}</span>
+                <span class="textDate d-flex me-auto">15:30</span>
+
               </div>
 
 
@@ -129,9 +127,6 @@
                 placeholder="Cerca o inizia una nuova chat"
                 v-model="sendMessage"
                 @keyup.enter="addNewMessage()" />
-
-
-
             </div>
             <div><i class="fas fa-microphone ms-3"></i></div>
           </div>
