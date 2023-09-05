@@ -193,7 +193,7 @@ createApp({
 
     responseNewMessage() {
       const newMessage = {
-        message: "ma vaffanculo",
+        message: "Ricordati di salvare e pushare",
         status: "received",
         date: "oggi",
       };
