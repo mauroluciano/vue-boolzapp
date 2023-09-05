@@ -115,3 +115,7 @@ i {
   color: #b1b1b1;
   font-size: 12px;
 }
+
+.input-group-text {
+  background-color: white;
+}
