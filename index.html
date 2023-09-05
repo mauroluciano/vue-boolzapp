@@ -72,7 +72,7 @@
                 </div>
               </div>
               <div class="chatList">
-                <section class="d-flex justify-content-start p-2" v-for="(contact, index) of contacts" @click="setCurrent(index)">
+                <section class="d-flex justify-content-start p-2" :class="(currentContact == index) ? 'active' : ''" v-for="(contact, index) of contacts" @click="setCurrent(index)">
                   <div class="align-self-center">
                     <img src="./img/avatar_1.jpg" class="thumb me-2" alt="" />
                   </div>

@@ -67,7 +67,7 @@ body {
   background-color: white;
 }
 
-#active {
+.active {
   background-color: #eaeaea;
 }
 
